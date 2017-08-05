@@ -1,4 +1,4 @@
-## Freeze-No-More
+## Freeze No More
 ### Stops Windows PCs from Freezing
 - - -  
 If you have a cheap or underperforming PC that freezes all the time, this
