@@ -15,8 +15,12 @@ class antifreeze
 		{
 			if (!app.Responding)
 			{
-				app.Kill();
-				MessageBox.Show("Antifreeze killed " + app.ProcessName + " because it was not responding", "Freeze No More");
+				try {
+					app.Kill();
+					MessageBox.Show("Antifreeze killed " + app.ProcessName + " because it was not responding", "Freeze No More");
+				} catch (Exception e0) {
+					MessageBox.Show("An error occurred while Antifreeze tried to kill " + app.ProcessName + ".\n" + e0.ToString());
+				}
 			}
 		}
 		Thread.Sleep(7000);

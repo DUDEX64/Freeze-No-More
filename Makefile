@@ -1,3 +1,3 @@
 nofreeze:
-	mcs -r:System.Windows.Forms.dll antifreeze.cs
+	mcs -r:System.Windows.Forms.dll -t:winexe antifreeze.cs
 
