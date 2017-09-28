@@ -22,8 +22,9 @@ class antifreeze
 					MessageBox.Show("An error occurred while Antifreeze tried to kill " + app.ProcessName + ".\n" + e0.ToString());
 				}
 			}
+			Thread.Sleep(100);
 		}
-		Thread.Sleep(7000);
+		Thread.Sleep(5000);
 	}
     }
 }
