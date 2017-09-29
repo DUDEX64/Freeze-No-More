@@ -8,7 +8,7 @@ class antifreeze
     static void Main()
     {
 	Process[] apps;
-        while (true)
+    while (true)
 	{
 		apps = Process.GetProcesses();
 		foreach (Process app in apps)
