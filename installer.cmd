@@ -1,5 +1,5 @@
 @echo off
-title Freeze No More Installer
+title Miranda Studios - Freeze No More, Installation
 rem Program not complete.
 echo Miranda Studios (DUDEX64) Freeze No More
 echo Copyright (C) 2017 Michael Miranda, all rights reserved.
@@ -22,6 +22,7 @@ if not exist "antifreeze.exe" (
     echo Cannot Install or Update the program, QUITING.
     echo.
     pause
+    explorer "%homepath%\Downloads"
     exit /b 1
 )
 echo This program is licenced under the terms of the GNU General
@@ -29,4 +30,55 @@ echo Public Licence Version 3, or at your option, any later version.
 echo For more details, please see <http://www.gnu.org/licenses/>.
 echo.
 pause
-rem Main installer code here
+cls
+echo Miranda Studios (DUDEX64) Freeze No More
+echo Copyright (C) 2017 Michael Miranda, all rights reserved.
+echo.
+echo Please wait while the program installs/updates...
+set programfile=%homepath%\Downloads\antifreeze.exe
+set installdir=C:\Program Files\Antifreeze
+if not exist "%installdir%" (
+    mkdir "%installdir%"
+)
+if "%ERRORLEVEL%" -NEQ "0" (
+    echo ERROR: Could not make/find install directory.
+    goto errorender
+)
+copy "%programfile%" "%installdir"
+if "%ERRORLEVEL%" -NEQ "0" (
+    echo ERROR: Could not install "%programfile%" into "%installdir%"
+    goto errorender
+)
+chdir "%homepath%\AppData\Local\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+if "%ERRORLEVEL%" -NEQ "0" (
+    echo ERROR: Could not change into startup folder.
+    goto errorender
+)
+(
+    echo @start "NOFREEZE" "%installdir%\antifreeze.exe"
+) > nofreeze.cmd
+if "%ERRORLEVEL%" -NEQ "0" (
+    echo ERROR: Could not create startup program to launch antifreeze.exe.
+    goto errorender
+)
+cls
+echo Miranda Studios (DUDEX64) Freeze No More
+echo Copyright (C) 2017 Michael Miranda, all rights reserved.
+echo.
+echo Success, Freeze No More was successfully installed on your computer.
+echo You will need to restart for the changes to take effect.
+echo.
+choice /c yn /m "Would you like to restart now"
+if "%ERRORLEVEL%" == "1" (
+    shutdown /r /t 000
+)
+exit /b 0
+rem Successful Installation
+
+
+rem Subprogram Section
+: errorender
+echo.
+echo Installation Terminated, See the GitHub Issues Page for help.
+pause
+exit /b 1
