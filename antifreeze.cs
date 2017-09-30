@@ -15,7 +15,8 @@ class antifreeze
 			{
 				if (!app.Responding)
 				{
-					try {
+					try 
+					{
 						if (app.ProcessName == "explorer")
 						{
 							if(GetExplorers() == 1)
@@ -23,7 +24,9 @@ class antifreeze
 						}
 						app.Kill();
 						MessageBox.Show("Antifreeze killed " + app.ProcessName + " because it was not responding", "Freeze No More");
-					} catch (Exception e0) {
+					} 
+					catch (Exception e0) 
+					{
 						MessageBox.Show("An error occurred while Antifreeze tried to kill " + app.ProcessName + ".\n" + e0.ToString());
 					}
 				}
