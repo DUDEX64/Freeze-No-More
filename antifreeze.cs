@@ -18,7 +18,7 @@ class antifreeze
 					try {
 						if (app.ProcessName == "explorer")
 						{
-							if(GetExplorers() > 1)
+							if(GetExplorers() == 1)
 								continue;
 						}
 						app.Kill();
