@@ -7,27 +7,37 @@ class antifreeze
 {
     static void Main()
     {
-	Process[] apps;
-    while (true)
-	{
-		apps = Process.GetProcesses();
-		foreach (Process app in apps)
+		Process[] apps;
+    	while (true)
 		{
-			if (!app.Responding)
+			apps = Process.GetProcesses();
+			foreach (Process app in apps)
 			{
-				try {
-					app.Kill();
-					MessageBox.Show("Antifreeze killed " + app.ProcessName + " because it was not responding", "Freeze No More");
-				} catch (Exception e0) {
-					MessageBox.Show("An error occurred while Antifreeze tried to kill " + app.ProcessName + ".\n" + e0.ToString());
+				if (!app.Responding)
+				{
+					try {
+						if (app.ProcessName == "explorer")
+						{
+							if(GetExplorers() > 1)
+								continue;
+						}
+						app.Kill();
+						MessageBox.Show("Antifreeze killed " + app.ProcessName + " because it was not responding", "Freeze No More");
+					} catch (Exception e0) {
+						MessageBox.Show("An error occurred while Antifreeze tried to kill " + app.ProcessName + ".\n" + e0.ToString());
+					}
+				}
+				else
+				{
+					Thread.Sleep(100);
 				}
 			}
-			else
-			{
-				Thread.Sleep(100);
-			}
+			Thread.Sleep(5000);
 		}
-		Thread.Sleep(5000);
-	}
     }
+	static int GetExplorers()
+	{
+		Process[] explorers = Process.GetProcessesByName("explorer");
+		return explorers.Length;
+	}
 }
