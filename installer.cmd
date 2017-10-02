@@ -6,7 +6,7 @@ echo Copyright (C) 2017 Michael Miranda, all rights reserved.
 echo.
 rem If we don't have admin, we can't install
 rem If we are admin, our working dir will be system32
-if /i "%cd%" -NEQ "C:\Windows\System32" (
+if /i "%cd%" NEQ "C:\Windows\System32" (
     echo This program requires administrator privledges.
     echo Please run this program as administrator.
     echo.
@@ -40,24 +40,24 @@ set installdir=C:\Program Files\Antifreeze
 if not exist "%installdir%" (
     mkdir "%installdir%"
 )
-if "%ERRORLEVEL%" -NEQ "0" (
+if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not make/find install directory.
     goto errorender
 )
 copy "%programfile%" "%installdir"
-if "%ERRORLEVEL%" -NEQ "0" (
+if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not install "%programfile%" into "%installdir%"
     goto errorender
 )
 chdir "%homepath%\AppData\Local\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
-if "%ERRORLEVEL%" -NEQ "0" (
+if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not change into startup folder.
     goto errorender
 )
 (
     echo @start "NOFREEZE" "%installdir%\antifreeze.exe"
 ) > nofreeze.cmd
-if "%ERRORLEVEL%" -NEQ "0" (
+if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not create startup program to launch antifreeze.exe.
     goto errorender
 )
