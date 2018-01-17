@@ -7,8 +7,14 @@ running tasks that are not responding, in order to prevent a lock up.
   
 This program is licensed under the GNU General Public License V3, or at your
 option, any later version. See the license file for more details.
-  
-## Installing the program
+
+## Installing the release version
+1. Download the latest release from [here.](https://github.com/DUDEX64/Freeze-No-More/releases)
+2. Extract the files somewhere, place the antifreeze.exe file in your Downloads folder.
+3. Run installer.cmd as administrator.
+4. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
+
+## Installing the work in progress version
 1. Download the antifreeze.exe program, ensure it is in your Downloads folder.
 2. Download installer.cmd, run this as administrator.
 3. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
