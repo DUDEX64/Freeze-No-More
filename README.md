@@ -10,13 +10,13 @@ option, any later version. See the license file for more details.
 
 ## Installing the release version
 1. Download the latest release from [here.](https://github.com/DUDEX64/Freeze-No-More/releases)
-2. Extract the files somewhere, place the antifreeze.exe file in your Downloads folder.
+2. Extract the files, keeping the same directory/file structure.
 3. Run installer.cmd as administrator.
 4. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
 
 ## Installing the work in progress version
-1. Download the antifreeze.exe program, ensure it is in your Downloads folder.
-2. Download installer.cmd, run this as administrator.
+1. Download the antifreeze.exe program, remember the folder in which you saved it.
+2. Download installer.cmd to the same folder, run it as administrator.
 3. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
 
 ## Removing the program
