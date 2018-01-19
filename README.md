@@ -1,5 +1,5 @@
 ## Freeze No More
-### Stops Windows PCs from Freezing
+### Stops Windows&reg; PCs from Freezing
 - - -  
 If you have an underperforming PC that freezes all the time, this
 program will prevent that. This program automatically ends any other 
