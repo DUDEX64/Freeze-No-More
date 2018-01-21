@@ -43,7 +43,7 @@ if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not make/find install directory.
     goto errorender
 )
-copy "%programfile%" "%installdir"
+copy "%programfile%" "%installdir%"
 if "%ERRORLEVEL%" NEQ "0" (
     echo ERROR: Could not install "%programfile%" into "%installdir%"
     goto errorender

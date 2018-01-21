@@ -40,7 +40,7 @@ class antifreeze
 					Thread.Sleep(100);
 				}
 			}
-			Thread.Sleep(5000);
+			Thread.Sleep(8000);
 		}
     }
 	static int GetExplorers()
