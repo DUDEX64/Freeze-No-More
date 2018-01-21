@@ -12,7 +12,7 @@ option, any later version. See the license file for more details.
 installer program, use the latest release for a working installer.
 
 ## Installing the program
-1. Download the release version [here](https://github.com/DUDEX64/Freeze-No-More/releases/latest") or clone the repository.
+1. Download the release version [here](https://github.com/DUDEX64/Freeze-No-More/releases/latest) or clone the repository.
 2. Run copydownlad.cmd, this will put the antifreeze.exe program into your Downloads.
 3. Run the installer as Administrator.
 4. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
