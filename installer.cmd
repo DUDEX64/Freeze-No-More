@@ -16,12 +16,12 @@ if /i "%cd%" NEQ "C:\Windows\System32" (
 rem We have admin, we'll now change into the user's download
 rem folder to find the antifreeze.exe file, which we will then
 rem install or update.
-if not exist "antifreeze.exe" (
-    echo Error: Could not find antifreeze.exe in "%cd%"
+if not exist "%homepath%\Downloads\antifreeze.exe" (
+    echo Error: Could not find antifreeze.exe in "%homepath%\Downloads"
     echo Cannot Install or Update the program, QUITING.
     echo.
     pause
-    explorer "%cd%"
+    explorer "%homepath%"
     exit /b 1
 )
 echo This program is licenced under the terms of the GNU General
@@ -34,8 +34,8 @@ echo Miranda Studios (DUDEX64) Freeze No More
 echo Copyright (C) 2017 Michael Miranda, all rights reserved.
 echo.
 echo Please wait while the program installs/updates...
-set programfile=%cd%\antifreeze.exe
-set installdir=C:\Program Files\Antifreeze
+set programfile=%homepath%\Downloads\antifreeze.exe
+set installdir=C:\Program Files\Antifreeze\
 if not exist "%installdir%" (
     mkdir "%installdir%"
 )

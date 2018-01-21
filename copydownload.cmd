@@ -1,0 +1,1 @@
+@copy antifreeze.exe "%homepath%\Downloads\"
