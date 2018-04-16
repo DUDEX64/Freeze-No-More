@@ -6,16 +6,18 @@ program will prevent that. This program automatically ends any other
 running tasks that are not responding, in order to prevent a lock up.  
   
 This program is licensed under the GNU General Public License V3, or at your
-option, any later version. See the license file for more details.
+option, any later version. Please read the license file for more details.
 
 **PLEASE NOTE:** Version v1.1 (Little Changes) and the First Release (v1.0) has a broken
 installer program, use the latest release for a working installer.
+
+**Please report all problems you encounter to the GitHub&reg; Issues Page.**
 
 ## Installing the program
 1. Download the release version [here](https://github.com/DUDEX64/Freeze-No-More/releases/latest) or clone the repository.
 2. Run copydownlad.cmd, this will put the antifreeze.exe program into your Downloads.
 3. Run the installer as Administrator.
-4. If you encounter any problems, please report them on the GitHub&reg; Issues Page.
+4. All done. If you encountered any problems, please report them on the GitHub&reg; Issues Page.
 
 ## Removing the program
 This program doesn't yet have an uninstaller, so any removal needs to
