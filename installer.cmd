@@ -1,6 +1,5 @@
 @echo off
-title Miranda Studios - Freeze No More, Installation
-rem Program not complete.
+title Miranda Studios - Freeze No More Setup
 echo Miranda Studios (DUDEX64) Freeze No More
 echo Copyright (C) 2017 Michael Miranda, all rights reserved.
 echo.
@@ -21,7 +20,7 @@ if not exist "%homepath%\Downloads\antifreeze.exe" (
     echo Cannot Install or Update the program, QUITING.
     echo.
     pause
-    explorer "%homepath%"
+    start explorer.exe "%homepath%"
     exit /b 1
 )
 echo This program is licenced under the terms of the GNU General
@@ -78,6 +77,6 @@ rem Successful Installation
 rem Subprogram Section
 : errorender
 echo.
-echo Installation Terminated, See the GitHub Issues Page for help.
+echo Installation Terminated, See the GitHub(R) Issues Page for help.
 pause
 exit /b 1
