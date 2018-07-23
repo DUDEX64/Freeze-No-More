@@ -20,8 +20,10 @@ installer program, use the latest release for a working installer.
 4. All done. If you encountered any problems, please report them on the GitHub&reg; Issues Page.
 
 ## Removing the program
-This program doesn't yet have an uninstaller, so any removal needs to
-be done manually. Remember, Windows Explorer is not Internet Explorer.
+This program's uninstaller is still under development, you are free to
+try it. However, follow the manual instructions below for a reliable
+method of removing the program. 
+Remember, Windows Explorer is not Internet Explorer.
   
 1. Use Ctrl+Shft+Esc to open Task Manager
 2. Find antifreeze.exe
@@ -37,3 +39,14 @@ be done manually. Remember, Windows Explorer is not Internet Explorer.
   
 Any feedback as to why you wanted to remove this program is very welcome, I
 plead that you do so.
+
+## Contributing to the program
+If you wish to make a contribution to any part of the program,
+please do the following:
+
+1. Create a fork of this repository
+2. Make all the changes you wish in the forked repository
+3. Open a pull request with a link to your forked repository and
+optionally list all the changes you've made.
+4. Many thanks for any of your contributions. If you don't notice a reply, 
+this does not mean your contribution went to /dev/null.
