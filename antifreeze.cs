@@ -45,7 +45,6 @@ class antifreeze
     }
 	static int GetExplorers()
 	{
-		Process[] explorers = Process.GetProcessesByName("explorer");
-		return explorers.Length;
+		return Process.GetProcessesByName("explorer").Length;
 	}
 }
