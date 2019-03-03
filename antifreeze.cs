@@ -5,7 +5,7 @@ using System.Threading;
 
 /*
 Miranda Studios (DUDEX64) Freeze No More
-Copyright (C) 2017 Michael Miranda, all rights reserved.
+Copyright (C) 2019 Michael Miranda, all rights reserved.
 */
 
 class antifreeze
