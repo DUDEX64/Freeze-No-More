@@ -50,3 +50,23 @@ please do the following:
 optionally list all the changes you've made.
 4. Many thanks for any of your contributions. If you don't notice a reply, 
 this does not mean your contribution went to /dev/null.
+
+## Compiling the program
+Since this program is designed to mitigate a lock-up, the codebase is as small
+as possible. This means that compilation is simple and requires few dependencies.
+Original compilation was done on Fedora, and proceedes as follows.  
+  
+**Please note that using any other compiler (e.g. Visual Studio ) should  
+still be very simple if you are familiar with the .NET Framework.**
+  
+Install Mono C# :  
+  `$ sudo dnf -y install mono-devel`
+  
+Once installed, you can clone the repo.  
+  `$ git clone https://github.com/DUDEX64/Freeze-No-More.git`
+  
+Compilation should be straight forward  
+  `$ cd Freeze-No-More; make`
+  
+Please report any errors to the Issues Page.
+
